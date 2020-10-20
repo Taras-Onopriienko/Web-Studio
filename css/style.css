@@ -1,0 +1,187 @@
+/* Шрифт палитра */
+/* основной цвет текста #757575 */
+/* вторичный цвет текста #212121 */
+/* белый #FFFFFF  */
+/* акцент #2196F3 */
+/* футер контакты  rgba(255, 255, 255, 0.6) */
+/* футер разработчики rgba(255, 255, 255, 0.4) */
+
+/* Фон палитра */
+/* цвет фона шапки #FFFFFF */
+/* цвет фона #E5E5E5 */
+/* вторичный цвет фона #F5F4FA */
+/* цвет фона футера #2F303A */
+
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-white-color: #ffffff;
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  outline: 2px solid red;
+}
+
+/* Шапка сайта */
+
+.page-header {
+  color: var(--primary-white-color);
+}
+.page-header .container {
+  display: flex;
+}
+.logo {
+  display: block;
+  margin-right: 85px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  color: var(--title-text-color);
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 700px;
+  font-size: 26px;
+  line-height: 1.19;
+}
+.logo-web {
+  color: var(--accent-color);
+}
+
+.nav-list {
+  display: flex;
+}
+.nav-list .item:not(:last-child) {
+  margin-right: 50px;
+}
+.nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--title-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color);
+}
+.contact-list {
+  display: flex;
+  margin-left: auto;
+}
+.contact-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+.contact-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--title-text-color);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.contact-link:hover,
+.contact-link:focus {
+  color: var(--accent-color);
+}
+
+/* Герой */
+
+.section-hero {
+  margin: auto;
+
+  text-align: center;
+  max-width: 1600px;
+
+  color: var(--primary-white-color);
+
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.section-hero .container {
+  height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.hero-title {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.hero-button {
+  display: inline-block;
+  padding: 10px 32px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
