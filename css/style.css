@@ -132,9 +132,13 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+.contact-link > svg {
+  margin-right: 10px;
+}
 .contact-link:hover,
 .contact-link:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* Герой */
