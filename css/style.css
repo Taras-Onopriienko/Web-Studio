@@ -145,8 +145,8 @@ ul {
 
 .section-hero {
   margin: auto;
-
   text-align: center;
+  height: 600px;
   max-width: 1600px;
 
   color: var(--primary-white-color);
@@ -154,6 +154,12 @@ ul {
   background-size: cover;
   background-position: center;
   background-color: rgba(47, 48, 58, 0.8);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../img/hero-img.jpg);
 }
 
 .section-hero .container {
@@ -488,6 +494,12 @@ ul {
 }
 .footer-contacts-list .item {
   margin-bottom: 9px;
+}
+.footer-contacts-link:hover {
+  color: var(--accent-color);
+}
+.footer-contacts-link:focus {
+  color: var(--accent-color);
 }
 .footer-contacts-link {
   color: rgba(255, 255, 255, 0.6);
