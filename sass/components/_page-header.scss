@@ -1,0 +1,29 @@
+.page-header {
+  color: $primary-white-color;
+}
+
+.container {
+  @extend %container;
+}
+
+.page-header .container {
+  display: flex;
+}
+
+.page-header .logo {
+  display: block;
+  margin-right: 85px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  color: $title-text-color;
+
+  font-family: $logoFont;
+  font-weight: 700px;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo-web {
+  color: $accent-color;
+}

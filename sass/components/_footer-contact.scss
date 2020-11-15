@@ -1,0 +1,43 @@
+.footer-contacts {
+  padding-right: 69px;
+
+  .logo {
+    display: block;
+    margin-bottom: 20px;
+
+    font-family: $logoFont;
+    font-weight: 700px;
+    font-size: 26px;
+    line-height: 1.19;
+    color: $primary-white-color;
+  }
+}
+
+.footer-address {
+  margin-bottom: 9px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  font-style: normal;
+}
+.footer-contacts-list {
+  padding-left: 0px;
+  margin: 0px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+
+  .item {
+    margin-bottom: 9px;
+  }
+}
+
+.footer-contacts-link {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-contacts-link:hover,
+:focus {
+  color: $accent-color;
+}

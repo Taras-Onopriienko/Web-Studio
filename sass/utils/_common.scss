@@ -1,0 +1,32 @@
+body {
+  background-color: $primary-white-color;
+  color: $primary-text-color;
+
+  font-family: $mainFont;
+  letter-spacing: 0.03em;
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}

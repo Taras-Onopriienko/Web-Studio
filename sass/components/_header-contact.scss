@@ -1,0 +1,27 @@
+.contact-list {
+  display: flex;
+  margin-left: auto;
+}
+.contact-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+.contact-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: $title-text-color;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.contact-link > svg {
+  margin-right: 10px;
+}
+.contact-link:hover,
+.contact-link:focus {
+  color: $accent-color;
+  fill: $accent-color;
+}
