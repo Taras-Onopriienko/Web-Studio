@@ -1115,7 +1115,7 @@ summary {
 }
 
 .social-link:hover,
-:focus {
+.social-link:focus {
   background-color: #2196f3;
   fill: #ffffff;
 }
