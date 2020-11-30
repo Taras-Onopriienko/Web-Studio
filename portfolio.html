@@ -14,6 +14,7 @@
     />
 
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
     <!-- <link rel="stylesheet" href="css/style.css"> -->
   </head>
 
@@ -22,39 +23,68 @@
 
     <header class="page-header">
       <div class="container">
-        <a class="logo" href="./index.html">
-          <span class="logo-web">Web</span> Studio</a
+        <div class="header-menu">
+          <a class="logo" href="./index.html">
+            <span class="logo-web">Web</span> Studio</a
+          >
+          <button
+            class="button-menu button-menu-is-open"
+            type="button"
+            data-menu-button
+            aria-expanded
+          >
+            <svg
+              class="menu-icon"
+              width="40"
+              height="40"
+              aria-label="перемикач мобильного меню"
+              aria-controls="menu-conteiner"
+            >
+              <use class="icon-cross" href="./img/sprite.svg#close"></use>
+              <use class="icon-menu" href="./img/sprite.svg#menu"></use>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="menu-container button-menu-is-open"
+          id="menu-conteiner"
+          data-menu
         >
-        <nav class="nav">
-          <ul class="nav-list">
-            <li class="item">
-              <a class="nav-link" href="./index.html">Студія</a>
-            </li>
-            <li class="item">
-              <a class="nav-link current" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li class="item"><a class="nav-link" href="#">Контакти</a></li>
-          </ul>
-        </nav>
-        <ul class="contact-list">
-          <li class="item">
-            <a class="contact-link" href="mailto:lalalal@gmail.com">
-              <svg width="16" height="12">
-                <use href="./img/sprite.svg#envelope"></use>
-              </svg>
-              lalalal@gmail.com
-            </a>
-          </li>
-          <li class="item">
-            <a class="contact-link" href="tel:380678490000">
-              <svg width="10" height="15">
-                <use href="./img/sprite.svg#smartphone"></use>
-              </svg>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="item">
+                <a class="nav-link" href="./index.html">Студия</a>
+              </li>
+              <li class="item">
+                <a class="nav-link current" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="item"><a class="nav-link" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="contact-nav">
+            <ul class="contact-list">
+              <li class="contact-email">
+                <a class="contact-link-email" href="mailto:lalalal@gmail.com">
+                  <svg class="icon" width="16" height="12">
+                    <use href="./img/sprite.svg#envelope"></use>
+                  </svg>
+                  lalalal@gmail.com
+                </a>
+              </li>
+              <li class="contact-tel">
+                <a class="contact-link-tel" href="tel:380678490000">
+                  <svg class="icon" width="10" height="15">
+                    <use href="./img/sprite.svg#smartphone"></use>
+                  </svg>
 
-              +380678490000
-            </a>
-          </li>
-        </ul>
+                  +380678490000
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -404,5 +434,7 @@
         <p lang="en" class="copyright">2020 | Developed by GoIT Students</p>
       </div>
     </footer>
+
+    <script src="./menu.js"></script>
   </body>
 </html>
