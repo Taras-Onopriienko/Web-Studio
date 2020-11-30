@@ -1,62 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Studio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
-    
     <link rel="stylesheet" href="./css/main.min.css" />
     <!-- <link rel="stylesheet" href="css/style.css"> -->
-    
-</head>
-<body>
+  </head>
+  <body>
     <!-- Шапка -->
 
     <header class="page-header">
-        <div class="container">
-            <a class="logo" href="./index.html"> <span class="logo-web">Web</span> Studio</a>
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="item"><a class="nav-link current" href="./index.html">Студия</a></li>
-                    <li class="item"><a class="nav-link" href="./portfolio.html">Портфолио</a></li>
-                    <li class="item"><a class="nav-link" href="#">Контакты</a></li>
-                </ul>
-            </nav>
-            <ul class="contact-list">
-                <li class="item">
-                    <a class="contact-link" href="mailto:lalalal@gmail.com">
-                        <svg width="16" height="12">
-                            <use href="./img/sprite.svg#envelope"></use>
-                        </svg>
-                        lalalal@gmail.com
-                    </a>
-                </li>
-                <li class="item">
-                    <a class="contact-link" href="tel:380678490000">
-                        <svg width="10" height="15">
-                            <use href="./img/sprite.svg#smartphone"></use>
-                        </svg>
-                        
-                        +380678490000
-                    </a>
-                </li>
-            </ul>
+      <div class="container">
+        <div class="header-menu">
+          <a class="logo" href="./index.html">
+            <span class="logo-web">Web</span> Studio</a
+          >
+          <button
+            class="button-menu button-menu-is-open"
+            type="button"
+            data-menu-button
+            aria-expanded
+          >
+            <svg
+              class="menu-icon"
+              width="40"
+              height="40"
+              aria-label="перемикач мобильного меню"
+              aria-controls="menu-conteiner"
+            >
+              <use class="icon-cross" href="./img/sprite.svg#close"></use>
+              <use class="icon-menu" href="./img/sprite.svg#menu"></use>
+            </svg>
+          </button>
         </div>
- 
-            
-        
+        <div
+          class="menu-container button-menu-is-open"
+          id="menu-conteiner"
+          data-menu
+        >
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="item">
+                <a class="nav-link current" href="./index.html">Студия</a>
+              </li>
+              <li class="item">
+                <a class="nav-link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="item"><a class="nav-link" href="#">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="contact-nav">
+            <ul class="contact-list">
+              <li class="contact-email">
+                <a class="contact-link-email" href="mailto:lalalal@gmail.com">
+                  <svg class="icon" width="16" height="12">
+                    <use href="./img/sprite.svg#envelope"></use>
+                  </svg>
+                  lalalal@gmail.com
+                </a>
+              </li>
+              <li class="contact-tel">
+                <a class="contact-link-tel" href="tel:380678490000">
+                  <svg class="icon" width="10" height="15">
+                    <use href="./img/sprite.svg#smartphone"></use>
+                  </svg>
+
+                  +380678490000
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- Контент -->
 
     <main>
+      <!-- Герой -->
 
-        <!-- Герой -->
-
-        <section class="section-hero">
+      <!-- <section class="section-hero">
             <div class="container">
                 <h1 class="hero-title">эффективные решения <br />
                 для вашего бизнеса</h1>
@@ -118,10 +151,10 @@
                 </div>
             </div>
 
-        </section>
+        </section> -->
 
-        <!-- Особливості -->
-        <section class="section-features">
+      <!-- Особливості -->
+      <!-- <section class="section-features">
             <div class="container">
             <h2 class="title-hidden">Особенности</h2>
             <ul class="features-list">
@@ -165,10 +198,10 @@
             </ul>
                 
             </div>
-        </section>
+        </section> -->
 
-        <!-- Чим ми займаємся -->
-        <section class="section-task">
+      <!-- Чим ми займаємся -->
+      <!-- <section class="section-task">
             <div class="container">
                 <h2 class="task-title">Чем мы занимаемся</h2>
                 <ul class="task-list">
@@ -196,10 +229,10 @@
                 </ul>
 
             </div>
-        </section>
+        </section> -->
 
-        <!-- Наша команда -->
-        <section class="section-team">
+      <!-- Наша команда -->
+      <!-- <section class="section-team">
             <div class="container">
                 <h2 class="team-title">Наша команда</h2>
                 <ul class="team-list">
@@ -371,10 +404,10 @@
 
                 </ul>
             </div>
-        </section>
+        </section> -->
 
-        <!-- Наші клієнти -->
-        <section class="section-clients">
+      <!-- Наші клієнти -->
+      <!-- <section class="section-clients">
             <div class="container">
                 <h2 class="team-title">Постоянные клиенты</h2>
                 <ul class="clients-list">
@@ -429,12 +462,12 @@
                 </ul>
             </div>
 
-        </section>
+        </section> -->
     </main>
 
     <!-- Футер -->
 
-    <footer class="footer">
+    <!-- <footer class="footer">
         <div class="container">
            <div class="footer-flex">
                 <div class="footer-contacts">
@@ -501,8 +534,9 @@
             <p lang="en" class="copyright">2020 | Developed by GoIT Students</p>
         </div>
 
-    </footer>
+    </footer> -->
 
-    <script src="./modal.js"></script>
-</body>
+    <!-- <script src="./modal.js"></script> -->
+    <script src="./menu.js"></script>
+  </body>
 </html>

@@ -1,13 +1,311 @@
+@import '../utils/breakpoints';
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+}
 .page-header {
+  position: relative;
+
   color: $primary-white-color;
 }
 
-.container {
-  @extend %container;
+.header-menu {
+  display: flex;
+  min-height: 60px;
+  max-height: 80px;
+
+  justify-content: space-between;
+  align-items: center;
 }
 
-.page-header .container {
+.menu-container {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+  @media screen and (max-width: $tablet - 1px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    background-color: $primary-white-color;
+    text-align: center;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 4px 8px rgba(0, 0, 0, 0.04);
+    &.button-menu-is-open {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
   display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+
+  &item + &item {
+    margin-left: 50px;
+  }
+}
+
+.nav {
+  @media screen and (max-width: $tablet - 1px) {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0px;
+  font-size: 18px;
+  line-height: 1.16;
+
+  @media screen and (min-width: $tablet) {
+    display: inline-flex;
+    // margin-right: 84px;
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    .item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    // margin-right: 290px;
+  }
+}
+
+.button-menu {
+  display: inline-flex;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    fill: $accent-color;
+  }
+
+  .icon-cross {
+    display: none;
+  }
+
+  &-is-open .icon-cross {
+    display: block;
+  }
+
+  &-is-open .icon-menu {
+    display: none;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: $title-text-color;
+
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.nav-link .current {
+  color: $accent-color;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: 10px;
+
+    border-radius: 2px;
+    background-color: $accent-color;
+
+    @media screen and (min-width: $tablet) {
+      bottom: 0;
+    }
+  }
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0px;
+
+  @media screen and (max-width: $tablet - 1px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    align-self: center;
+    margin-right: 10px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+.contact-email {
+  display: flex;
+  justify-content: start;
+
+  @media screen and (max-width: $tablet - 1px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 30px;
+  }
+
+  align-items: center;
+
+  .icon {
+    margin-right: 10px;
+
+    fill: currentColor;
+  }
+}
+
+.contact-tel {
+  display: flex;
+  justify-content: start;
+  margin-left: -2px;
+
+  @media screen and (max-width: $tablet - 1px) {
+    justify-content: center;
+  }
+
+  .icon {
+    margin-right: 10px;
+
+    fill: currentColor;
+  }
+}
+
+.contact-link-email {
+  display: flex;
+
+  @media screen and (max-width: $tablet - 1px) {
+    padding-top: 0px;
+    padding-bottom: 8px;
+  }
+
+  @media screen and (max-width: $desktop - 1px) {
+    padding-top: 0px;
+    padding-bottom: 5px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  align-items: center;
+
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.contact-link-tel {
+  display: flex;
+
+  @media screen and (max-width: $tablet - 1px) {
+    padding-top: 8px;
+    padding-bottom: 0px;
+  }
+
+  @media screen and (max-width: $desktop - 1px) {
+    padding-top: 5px;
+    padding-bottom: 0px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  align-items: center;
+
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.logo {
+  z-index: 999;
+
+  color: $title-text-color;
+  @media screen and (max-width: $tablet - 1px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 81px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 85px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+.logo-web {
+  color: $accent-color;
 }
 
 .page-header .logo {
@@ -24,6 +322,44 @@
   line-height: 1.19;
 }
 
-.logo-web {
-  color: $accent-color;
-}
+// .button-menu {
+//   display: inline-flex;
+//   z-index: 999;
+//   margin: 0;
+//   padding: 0;
+//   border: none;
+//   background-color: transparent;
+// }
+// .menu-container {
+//   @media screen and (max-width: 767px) {
+//     display: none;
+//     position: absolute;
+//     top: 100%;
+//     left: 0;
+//     width: 100%;
+//     z-index: 999;
+//     background-color: #fff;
+//     text-align: center;
+//   }
+// }
+// .menu-container .button-menu-is-open {
+//   @media screen and (max-width: 767px) {
+//     display: block;
+//   }
+// }
+
+// .button-menu {
+//   @media screen and (min-width: 768px) {
+//     display: none;
+//   }
+// }
+// .button-menu .icon-cross {
+//   display: none;
+// }
+// .button-menu-is-open .icon-cross {
+//   display: block;
+// }
+
+// .button-menu-is-open .icon-menu {
+//   display: none;
+// }
