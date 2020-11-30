@@ -1,59 +1,3 @@
-// .section-features .container {
-//   padding-top: 94px;
-
-//   border-bottom: 1px solid #ececec;
-// }
-// .title-hidden {
-//   position: absolute;
-//   width: 1px;
-//   height: 1px;
-//   margin: -1px;
-//   border: 0;
-//   padding: 0;
-//   clip: rect(0 0 0 0);
-//   overflow: hidden;
-// }
-
-// .features-list {
-//   display: flex;
-// }
-// .features-list > li:not(:last-child) {
-//   margin-right: 30px;
-// }
-// .features-link {
-//   display: inline-block;
-//   margin-bottom: 30px;
-//   width: 270px;
-//   height: 120px;
-//   padding: 25px 100px;
-
-//   background-color: $secondary-background-color;
-//   border-radius: 4px;
-// }
-// .features-icon {
-//   width: 70px;
-//   height: 70px;
-// }
-// .features-title {
-//   margin-top: 0px;
-//   margin-bottom: 10px;
-
-//   color: $title-text-color;
-//   font-weight: bold;
-//   font-size: 14px;
-//   line-height: 16px;
-//   letter-spacing: 0.03em;
-//   text-transform: uppercase;
-// }
-// .features-text {
-//   margin-bottom: 0px;
-//   margin-top: 0px;
-
-//   font-size: 14px;
-//   line-height: 1.71;
-//   color: $primary-text-color;
-// }
-
 @import '../utils/breakpoints';
 @import '../utils/common';
 @import '../utils/mixin';
@@ -61,8 +5,20 @@
 @import '../utils/variables';
 
 /* Feature css options */
-.feature__list {
-  @extend %no-list;
+.title-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0px;
 
   @media screen and (min-width: $tablet) {
     display: flex;
@@ -73,7 +29,7 @@
   }
 }
 
-.feature__item {
+.features-item {
   width: 100%;
 
   @media screen and (min-width: $mobile) {
@@ -96,7 +52,7 @@
   }
 }
 
-.feature__icon {
+.features-icon {
   display: block;
   width: 100%;
   height: 120px;
@@ -104,15 +60,15 @@
   padding: 25px 0;
 
   border-radius: 4px;
-  background-color: $bgc-secondary;
+  background-color: $secondary-background-color;
 }
 
-.feature__title {
+.features-title {
   margin-bottom: 10px;
 
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  color: $font-color-secondary;
+  color: $title-text-color;
   text-transform: uppercase;
 }
