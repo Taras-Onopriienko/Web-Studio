@@ -405,7 +405,7 @@ ul {
   margin: 0px;
 }
 
-.container {
+.page-header .container {
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -413,7 +413,7 @@ ul {
 }
 
 @media screen and (min-width: 768px) {
-  .container {
+  .page-header .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1081,53 +1081,89 @@ ul {
   text-transform: uppercase;
 }
 
-.section-task .container {
-  padding-top: 94px;
-  padding-bottom: 94px;
+body {
+  background-color: #ffffff;
+  color: #757575;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
 }
 
-.task-title {
-  margin-top: 0px;
-  margin-bottom: 50px;
-  color: #212121;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
+* {
+  list-style: none;
+  text-decoration: none;
 }
 
-.task-list {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 0px;
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  padding: 0px;
   margin: 0px;
 }
 
-.task-list > li {
-  width: calc((100% - 60px) / 3);
+.task {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .task {
+    display: block;
+  }
+}
+
+.section-task .task-title {
+  margin-bottom: 50px;
+  text-align: center;
+  margin-top: 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  color: #212121;
+}
+
+.task-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .task-list li:not(:last-child) {
   margin-right: 30px;
 }
 
-.task-text {
+.task-thumb {
+  position: relative;
+}
+
+.task-thumb .task-text {
   position: absolute;
-  width: 370px;
-  height: 70px;
-  bottom: 0px;
-  padding: 27px 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  text-align: center;
-  border-radius: 0px 0px 4px 4px;
-  background: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+  right: 0;
   color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 27px 80px;
+  height: 70px;
+  width: 100%;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  text-align: center;
   text-transform: uppercase;
 }
 
